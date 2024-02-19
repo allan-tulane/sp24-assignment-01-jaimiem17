@@ -12,7 +12,8 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  $2^{n+1} \in O(2^n)$ because $2^{n+1} = $2^{1} * $2^{n} = O(2^n)$
+.  Yes
+  $2^{n+1} \in O(2^n)$ because $2^{n+1} = $2^{1} * $2^{n} = O(2^n)$
 .  You can also  pull out constant C to see that it is true 
 .  
 . 
@@ -23,22 +24,23 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  n^{1.01} grows faster than {log}^2 n and it tends to infinity instead of a finite positive number, so n^{1.01} !\in O(\mathrm{log}^2 n)$
+.
+$n^{1.01} grows faster than ${log}^2 n and it tends to infinity instead of a finite positive number, so $n^{1.01} !\in O(\mathrm{log}^2 n)$
     
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  Yes. in the lower bound, cf(n)<=g(n) when n>=n_0. n^{1.01}$ needs to grow at least as fast as {log}^2 n for  \in O(\mathrm{log}^2 n)$, and n^{1.01}$ grows faster.
+.  Yes. in the lower bound, cf(n)<=g(n) when n>=n_0. $n^{1.01} needs to grow at least as fast as ${log}^2 n for \in O(\mathrm{log}^2 n)$, and $n^{1.01} grows faster.
 .  
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
+.  No, $\sqrt{n} !\in O((\mathrm{log} n)^3)$
+.  as n becomes very large, $\sqrt{n} grows much faster than the cubic log of n and cf(n)>=g(n) when n>=n_0 for g(n) \in O(f(n))$
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+.  Yes. Like said earlier $\sqrt{n} grows much faster than the cubic log of n. This means g(n) asymptotically dominates f(n), so g(n) \in f(n), $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$
 
 
 2. **SPARC to Python** (12 pts)
