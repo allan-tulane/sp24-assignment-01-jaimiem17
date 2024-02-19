@@ -55,14 +55,16 @@ $$
 ~~~~~~~~\texttt{let}{}~~(ra, rb) = (\mathit{foo}~(x-1))~~,~~(\mathit{foo}~(x-2))~~\texttt{in}{}\\  
 ~~~~~~~~~~~~ra + rb\\  
 ~~~~~~~~\texttt{end}{}.\\
-\end{array}
+\end{array}\
 $$ 
 
   - 2a. (6 pts) Translate this to Python code -- fill in the `def foo` method in `main.py`  
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  This function takes in an integer, x, and if x is greater than 1, it wil repeatedly call itself with the parameters of its two preceding values until it finally is less than of equal to 1, which will then recursively return the product of all its preceding values.
+.  This function takes in an integer, x, and if x is greater than 1, it wil repeatedly call itself with the parameters 
+of its two preceding values until it finally is less than of equal to 1, which will then recursively return the product
+of all its preceding values.
 .  
 .  
 .  
@@ -90,10 +92,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
 .  
-.  
-.  
-.  
-.  
+.  The work and span are both $0(n)$
 .  
 .  
 .  
@@ -104,11 +103,8 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
 .  
-.  
-.  
-.  
-.  
-.  
+.  The work and span is O(n) because the algorithm processes each element one time (linearly)
+.  Since there is no parallezation, the span is the same as the work, O(n)
 .  
 .  
 .  
@@ -119,7 +115,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3e. (4 pts) Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
 
 .  
-.  
+.  The work would still be O(n), but the longest critical path would now be O(log2_n)
 .  
 .  
 .  

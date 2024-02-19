@@ -15,8 +15,21 @@ def foo(x):
     #pass
 
 def longest_run(mylist, key):
-    ### TODO
-    pass
+    counter = 0
+    max = counter
+  
+    for i in range(len(mylist)):
+      if mylist[i] == key:
+        counter += 1
+        if counter > max:
+          max = counter
+          
+      elif mylist[i] != key:
+        counter = 0
+
+    return max
+      
+    #pass
 
 
 class Result:
@@ -43,8 +56,44 @@ def to_value(v):
         return int(v)
         
 def longest_run_recursive(mylist, key):
-    ### TODO
-    pass
+    #if list is empty, return 0
+    if len(mylist) == 0:
+      return Result(0,0,0,False)
+
+    #if list has one element, check if element is key
+    if len(mylist) == 1:
+      if (mylist[0] == key):
+        return Result(1,1,1,True)
+      else:
+        return Result(0,0,0,False)
+
+    else:
+
+      #split list to get middle element
+      mid = len(mylist) // 2 
+      left = longest_run_recursive(mylist[:mid], key) 
+      right = longest_run_recursive(mylist[mid:], key)
+  
+      # set range to true or false- will be false if either side is not the key or true if both sides are entirely the key
+      is_entire_range = left.is_entire_range and right.is_entire_range
+      left_size = left.left_size
+      right_size = right.right_size
+      longest_size = max(left.longest_size, right.longest_size, left.right_size + right.left_size)
+
+      
+      return Result(left_size, right_size, longest_size, is_entire_range)
+  
+    
+      
+
+
+print(to_value(longest_run_recursive([12,12,12,8,12,12,0,12,12,12,12], 12)))
+  
+
+
+
+  
+  #  pass
 
 
 
