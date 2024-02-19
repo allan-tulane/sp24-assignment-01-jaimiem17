@@ -30,7 +30,7 @@ $n^{1.01}$ grows faster than ${log}^2$ n and it tends to infinity instead of a f
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  Yes. in the lower bound, $cf(n)<=g(n)$ when $n>=n_0$. $n^{1.01}$ needs to grow at least as fast as ${log}^2$ n for \in O(\mathrm{log}^2 n)$, and $n^{1.01} grows faster.
+.  Yes. in the lower bound, $cf(n)<=g(n)$ when $n>=n_0$. $n^{1.01}$ needs to grow at least as fast as ${log}^2 n for \in O(\mathrm{log}^2 n)$, and $n^{1.01}$ grows faster.
 .  
 .  
 .  
@@ -62,10 +62,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
-.  
-.  
-.  
+.  This function takes in an integer, x, and if x is greater than 1, it wil repeatedly call itself with the parameters of its two preceding values until it finally is less than of equal to 1, which will then recursively return the product of all its preceding values.
 .  
 .  
 .  
