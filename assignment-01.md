@@ -12,13 +12,12 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
-.  The expression $2^{n+1}$ is not in $O(2^n)$. In Big O notation, $O(2^n)$ represents an upper bound on the growth rate of a function. For $2^{n+1}$ to be in $O(2^n)$, there must exist positive constants $c$ and $k$ such that $2^{n+1} \leq c \cdot 2^n$ for all $n \geq k$. However, this is not true because $2^{n+1} = 2 \cdot 2^n$, which implies that $2^{n+1}$ grows twice as fast as $2^n$. Therefore, $2^{n+1}$ is not in $O(2^n)$.
-.  
+.  $2^{n+1} \in O(2^n)$ because $2^{n+1} = $2^{1} * $2^{n} = O(2^n)$
+.  You can also  pull out constant C to see that it is true 
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
+.  No. In this case there is no constant C such that $2^{2^n} <= $C{2^n} for all n that is big enough because 2^{2^n} will always increase at exponentially faster than ${2^n}
 .  
 .  
 .  
