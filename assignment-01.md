@@ -17,13 +17,13 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  No. In this case there is no constant C such that $2^{2^n} <= C(2^n)$ for all n that is big enough because $2^{2^n} will always increase at exponentially faster than ${2^n}
+.  No. In this case there is no constant C such that $2^{2^n} <= C(2^n)$ for all n that is big enough because $2^{2^n} will always increase at exponentially faster than $2^{n}
 .  
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
+.  n^{1.01} grows faster than (\mathrm{log}^2 n)$ and it tends to infinity instead of a finite positive number, so n^{1.01} !\in O(\mathrm{log}^2 n)$
 .  
 .  
 .  
